@@ -1,0 +1,25 @@
+{
+  "name": "serverless-typescript-dynamodb",
+  "version": "1.0.0",
+  "scripts": {
+    "install": "sls dynamodb install && mkdir .db",
+    "migrate-db": "sls dynamodb start --migrate --dbPath ../../../../.db",
+    "dev": "sls dynamodb start --dbPath ../../../../.db & serverless offline --location .webpack",
+    "deploy": "serverless deploy"
+  },
+  "devDependencies": {
+    "@types/node": "^7.0.22",
+    "json-loader": "^0.5.4",
+    "serverless-dynamodb-local": "^0.2.22",
+    "serverless-offline": "^3.14.0",
+    "serverless-plugin-typescript": "^0.1.10",
+    "serverless-webpack": "^1.0.0-rc.4",
+    "ts-loader": "^2.1.0",
+    "webpack": "^2.6.0",
+    "webpack-node-externals": "^1.6.0"
+  },
+  "dependencies": {
+    "bluebird": "^3.5.0",
+    "lodash": "^4.17.4"
+  }
+}
