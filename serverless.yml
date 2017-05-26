@@ -5,14 +5,14 @@ provider:
   runtime: nodejs6.10
   profile: devProfile
   region: ap-northeast-2
-  environment:
-    STAGE: ${self:custom.stage}
   iamRoleStatements:
     - Effect: "Allow"
       Action:
         - "dynamodb:*"
       Resource:
         - "arn:aws:dynamodb:ap-northeast-2:*"
+  environment:
+    STAGE: ${self:custom.stage}
 
 plugins:
   - serverless-dynamodb-local
