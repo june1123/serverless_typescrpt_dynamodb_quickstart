@@ -28,10 +28,13 @@ functions:
     memorySize: 128
     events:
       - http:
-          path: tutorial/hello
-          method: get
+          path: view
+          method: post
       - http:
-          path: tutorial/create
+          path: click
+          method: post
+      - http:
+          path: get
           method: get
 
 resources:
@@ -39,10 +42,10 @@ resources:
     UserEvent:
       Type: AWS::DynamoDB::Table
       Properties:
-        TableName: ${self:custom.stage}-UserEvent
+        TableName: ${self:custom.stage}-userevent
         AttributeDefinitions:
           - AttributeName: id
-            AttributeType: N
+            AttributeType: S
         KeySchema:
           - AttributeName: id
             KeyType: HASH

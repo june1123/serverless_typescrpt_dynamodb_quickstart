@@ -3,15 +3,23 @@ import * as _ from 'lodash';
 
 class UserEventService {
 
-  async create() {
-    const ue = new UserEvent();
-    ue.type = 'view';
-    const result = await ue.put();
-    console.log('result', result);
+  static async view() {
+    const result = await UserEvent.createAsync({ type: 'view' });
     return result;
   }
 
-  hello() {
+  static async click() {
+    const result = await UserEvent.createAsync({ type: 'click' });
+    return result;
+  }
+
+  static async get() {
+    const result = await UserEvent.scan().execAsync();
+    console.log(_.map(result.Items, 'attrs'));
+    return result;
+  }
+
+  static hello() {
     const hello = 'hello';
     return _.reduce(hello, (rs, s, index) => {
       rs += s + index;

@@ -1,11 +1,13 @@
 import UserEventService from './services/UserEventService';
+import * as dynogels from 'dynogels';
 
 async function handleEvent(event, context) {
-  const service = new UserEventService();
-  if (event.path === '/tutorial/hello') {
-    return service.hello();
-  } else if (event.path === '/tutorial/create') {
-    return service.create();
+  if (event.path === '/view') {
+    return UserEventService.view();
+  } else if (event.path === '/click') {
+    return UserEventService.click();
+  } else if (event.path === '/get') {
+    return UserEventService.get();
   }
 }
 
