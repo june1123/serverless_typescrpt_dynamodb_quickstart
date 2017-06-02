@@ -21,6 +21,7 @@ plugins:
 
 custom:
   stage: ${opt:stage, self:provider.stage}
+  webpackIncludeModules: true # enable auto including modules\
 
 functions:
   dynamo-tutorial:
