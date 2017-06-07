@@ -5,18 +5,17 @@ class UserEventService {
 
   static async view() {
     const result = await UserEvent.createAsync({ type: 'view' });
-    return result;
+    return result.toJSON();
   }
 
   static async click() {
     const result = await UserEvent.createAsync({ type: 'click' });
-    return result;
+    return result.toJSON();
   }
 
   static async get() {
     const result = await UserEvent.scan().execAsync();
-    console.log(_.map(result.Items, 'attrs'));
-    return result;
+    return _.map(result.Items, (item) => item.toJSON());
   }
 
   static hello() {
