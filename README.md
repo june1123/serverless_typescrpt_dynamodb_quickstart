@@ -44,6 +44,11 @@ npm run migrate-db
 npm run dev
 ```
 
+# run tests
+```
+npm test
+```
+
 # deploy
 ```
 npm run deploy
