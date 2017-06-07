@@ -2,6 +2,12 @@ import * as Promise from 'bluebird';
 import * as dynogels from 'dynogels-promisified';
 import * as Joi from 'joi';
 import * as _ from 'lodash';
+import * as AWS from 'aws-sdk';
+import * as logger from 'winston';
+
+logger.level = 'warn';
+// enabled WARN log level on all tables
+dynogels.log = logger;
 
 const dynamo_offline_options = {
   region: "localhost",
