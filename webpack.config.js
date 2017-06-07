@@ -3,7 +3,10 @@ var nodeExternals = require('webpack-node-externals');
 
 module.exports = {
   context: path.join(__dirname, "src"),
-  entry: "./Handler.ts",
+  entry: [
+    'dynogels', // To include external modules.
+    "./Handler.ts"
+  ],
   target: 'node',
   externals: [nodeExternals()], // exclude external modules
   module: {

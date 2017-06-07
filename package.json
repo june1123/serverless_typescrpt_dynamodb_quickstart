@@ -24,14 +24,14 @@
     "ts-node": "^3.0.4",
     "tsconfig-paths": "^2.2.0",
     "webpack": "^2.6.0",
-    "webpack-node-externals": "^1.6.0",
-    "winston": "^2.3.1"
+    "webpack-node-externals": "^1.6.0"
   },
   "dependencies": {
     "bluebird": "^3.5.0",
     "dynogels": "^8.0.0",
     "dynogels-promisified": "^1.0.4",
     "joi": "^10.5.2",
-    "lodash": "^4.17.4"
+    "lodash": "^4.17.4",
+    "winston": "^2.3.1"
   }
 }
