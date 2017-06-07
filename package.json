@@ -5,18 +5,27 @@
     "install": "sls dynamodb install",
     "migrate-db": "rm -rf .db; mkdir .db; sls dynamodb start --migrate --dbPath ../../../../.db",
     "dev": "sls dynamodb start --dbPath ../../../../.db & serverless offline --location .webpack",
-    "deploy": "serverless deploy"
+    "deploy": "serverless deploy",
+    "test": "ts-node RunTest.ts"
   },
   "devDependencies": {
+    "@types/chai": "^4.0.0",
+    "@types/mocha": "^2.2.41",
     "@types/node": "^7.0.22",
+    "chai": "^4.0.1",
     "json-loader": "^0.5.4",
+    "mocha": "^3.4.2",
     "serverless-dynamodb-local": "^0.2.22",
     "serverless-offline": "^3.14.0",
     "serverless-plugin-typescript": "^0.1.10",
     "serverless-webpack": "^1.0.0-rc.4",
+    "sinon": "^2.3.2",
     "ts-loader": "^2.1.0",
+    "ts-node": "^3.0.4",
+    "tsconfig-paths": "^2.2.0",
     "webpack": "^2.6.0",
-    "webpack-node-externals": "^1.6.0"
+    "webpack-node-externals": "^1.6.0",
+    "winston": "^2.3.1"
   },
   "dependencies": {
     "bluebird": "^3.5.0",
