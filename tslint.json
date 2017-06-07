@@ -3,19 +3,25 @@
   "extends": [
     "tslint:recommended"
   ],
-  "jsRules": {
-  },
+  "jsRules": {},
   "rules": {
     "forin": false,
     "interface-name": {
-      "options": ["never-prefix"]
+      "options": [
+        "never-prefix"
+      ]
     },
     "max-classes-per-file": {
-      "options": [10]
+      "options": [
+        10
+      ]
     },
     "max-line-length": {
-      "options": [400]
+      "options": [
+        400
+      ]
     },
+    "only-arrow-functions": false,
     "member-access": false,
     "member-ordering": false,
     "no-console": false,
