@@ -1,4 +1,4 @@
-import UserEventService from './services/UserEventService';
+import UserEventService from 'app/services/UserEventService';
 import * as dynogels from 'dynogels';
 
 async function handleEvent(event, context) {
@@ -24,7 +24,3 @@ export async function mainHandler(event, context, callback) {
     callback(error);
   }
 };
-
-
-
-
