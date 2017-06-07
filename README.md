@@ -45,6 +45,14 @@ npm run dev
 ```
 
 # run tests
+Test runs with below environment variables.
+
+```
+env.NODE_ENV=test
+env.IS_OFFLINE=offline
+env.STAGE=dev
+```
+To run test, use following command.
 ```
 npm test
 ```
